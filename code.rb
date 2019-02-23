@@ -18,5 +18,5 @@ def nato(message)#=> 123abc??
       answer<< nato_letters.find {|word| word[0] == char.upcase}
     end
   end    
-  answer.join(" ")
+  answer.compact.join(" ")
 end
