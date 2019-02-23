@@ -2,7 +2,6 @@
 
 
 
-
 ALPHABET = %w(Alpha Bravo Charlie Delta Echo Foxtrot Golf Hotel India Juliet Kilo Lima Mike November Oscar Papa Quebec Romeo Sierra Tango Uniform Victor Whiskey XRay Yankee Zulu Zero One Two Tree Four Fife Six Seven Eight Niner)
 
 def nato(message)#=> 123abc??
@@ -14,11 +13,10 @@ def nato(message)#=> 123abc??
     
   array.each do |char|
     if (char.match(/\d/))
-      answer<< nato_numbers[char]
+      answer<< nato_numbers[char.to_i]
     else
       answer<< nato_letters.find {|word| word[0] == char.upcase}
     end
   end    
-  answer
+  answer.join(" ")
 end
-            
